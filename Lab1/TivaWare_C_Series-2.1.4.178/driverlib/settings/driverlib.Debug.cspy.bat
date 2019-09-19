@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\rodri\OneDrive\Documents\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.general.xcl" --backend -f "C:\Users\rodri\OneDrive\Documents\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.driver.xcl" 
+"D:\Softwares\common\bin\cspybat" -f "D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.general.xcl" --backend -f "D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\rodri\OneDrive\Documents\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\rodri\OneDrive\Documents\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.driver.xcl" 
+"D:\Softwares\common\bin\cspybat" -f "D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\driverlib\settings\driverlib.Debug.driver.xcl" 
 
 @echo off 
 :end

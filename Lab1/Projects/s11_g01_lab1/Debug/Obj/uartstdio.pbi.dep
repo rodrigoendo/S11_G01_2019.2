@@ -1,0 +1,18 @@
+uartstdio.pbi: \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\TivaWare_C_Series-2.1.4.178\utils\uartstdio.c \
+  D:\Softwares\arm\inc\c\stdbool.h D:\Softwares\arm\inc\c\stdint.h \
+  D:\Softwares\arm\inc\c\ycheck.h D:\Softwares\arm\inc\c\yvals.h \
+  D:\Softwares\arm\inc\c\DLib_Defaults.h \
+  D:\\Softwares\\arm\\inc\\c\\DLib_Config_Normal.h \
+  D:\Softwares\arm\inc\c\DLib_Product.h D:\Softwares\arm\inc\c\stdarg.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\inc/hw_ints.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\inc/hw_types.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\inc/hw_uart.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\driverlib/debug.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\driverlib/interrupt.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\driverlib/rom.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\driverlib/rom_map.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\driverlib/sysctl.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\driverlib/uart.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab1\Projects\s11_g01_lab1\..\..\TivaWare_C_Series-2.1.4.178\utils/uartstdio.h
