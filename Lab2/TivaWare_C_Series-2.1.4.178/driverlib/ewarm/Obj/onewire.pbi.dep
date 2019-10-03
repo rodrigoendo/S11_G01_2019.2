@@ -1,0 +1,15 @@
+onewire.pbi: \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\onewire.c \
+  D:\Softwares\arm\inc\c\stdint.h D:\Softwares\arm\inc\c\ycheck.h \
+  D:\Softwares\arm\inc\c\yvals.h D:\Softwares\arm\inc\c\DLib_Defaults.h \
+  D:\\Softwares\\arm\\inc\\c\\DLib_Config_Normal.h \
+  D:\Softwares\arm\inc\c\DLib_Product.h D:\Softwares\arm\inc\c\stdbool.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\inc/hw_ints.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\inc/hw_memmap.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\inc/hw_onewire.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\inc/hw_sysctl.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\inc/hw_types.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\driverlib/debug.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\driverlib/interrupt.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\driverlib/onewire.h \
+  D:\Usuario\Documents\GitHub\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\..\driverlib/sysctl.h

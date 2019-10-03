@@ -1,0 +1,29 @@
+#Generating source browse information for project s11_g01_lab2
+
+
+#Abbreviations
+cc = D$:\Softwares\common\bin\SourceIndexer.exe
+ll = D$:\Softwares\common\bin\PbdLink.exe
+bd = D$:\Softwares\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build s11_g01_lab2.pbi : index s11_g01_lab2.xcl
+build system_TM4C1294_TW.pbi : index system_TM4C1294_TW.xcl
+build uartstdio.pbi : index uartstdio.xcl
+build s11_g01_lab2.pbd : link s11_g01_lab2.pbi system_TM4C1294_TW.pbi uartstdio.pbi
+build s11_g01_lab2.pbw : browsedata s11_g01_lab2.pbd
+
+
