@@ -60,33 +60,49 @@ void UART0_Handler(void){
   UARTStdioIntHandler();
 } // UART0_Handler
 
-void main(void){
-  UARTInit();
-  
-  // Enable the Timer0 peripheral
-  SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);
-  
-  // Wait for the Timer0 module to be ready.
-  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0)) { }
-  
-  // Configure TimerA as a half-width one-shot timer, and TimerB as a
-  // half-width edge capture counter.
-  TimerConfigure(TIMER0_BASE, (TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_ONE_SHOT | TIMER_CFG_B_CAP_COUNT));
-  
-  // Set the count time for the the one-shot timer (TimerA).
-  TimerLoadSet(TIMER0_BASE, TIMER_A, 10000);
-  
-  // Configure the counter (TimerB) to count both edges.
-  TimerControlEvent(TIMER0_BASE, TIMER_B, TIMER_EVENT_BOTH_EDGES);
-  
-  // Enable the timers.
-  TimerEnable(TIMER0_BASE, TIMER_BOTH);
-  
-  while(true) {
+void duty_cycle(void)
+{
     uint32_t timerA = TimerValueGet(TIMER0_BASE, TIMER_A);
     uint32_t timerB = TimerValueGet(TIMER0_BASE, TIMER_B);
     printf("Timer A: %d\n", timerA);
     printf("Timer B: %d\n", timerB);
+}
+
+void main(void){
+  UARTInit();
+  
+    // Enable the Timer0 peripheral
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);
+  
+    // Wait for the Timer0 module to be ready.
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0)) { }
+  
+    // Configure TimerA as a half-width one-shot timer, and TimerB as a
+    // half-width edge capture counter.
+    TimerConfigure(TIMER0_BASE, (TIMER_CFG_SPLIT_PAIR | TIMER_CFG_B_PERIODIC | TIMER_CFG_B_PERIODIC));
+  
+    // Configure the counter (TimerB) to count both edges.
+    TimerControlEvent(TIMER0_BASE, TIMER_B, TIMER_EVENT_BOTH_EDGES);
+    TimerControlEvent(TIMER0_BASE, TIMER_A, TIMER_EVENT_BOTH_EDGES);
+  
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOL);
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOL));
+    GPIOPinConfigure(GPIO_PL4_T0CCP0);
+    GPIOPinTypeTimer(GPIO_PORTL_BASE, GPIO_PIN_4);
+  
+
+    // Registers a interrupt function to be called when timer b hits a neg edge event
+    TimerIntRegister(TIMER0_BASE, TIMER_A, duty_cycle);
+    // Makes sure the interrupt is cleared
+    TimerIntClear(TIMER0_BASE, TIMER_CAPA_EVENT);
+    // Enable the indicated timer interrupt source.
+    TimerIntEnable(TIMER0_BASE, TIMER_CAPA_EVENT);
+
+    // Enable the timers.
+    TimerEnable(TIMER0_BASE, TIMER_BOTH);
+  
+  while(true) {
+
   }
   
   int alta[10];
