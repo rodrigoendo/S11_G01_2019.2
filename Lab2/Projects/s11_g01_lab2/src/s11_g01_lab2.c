@@ -19,15 +19,20 @@ Semestre:
 #include <math.h>
 // Includes da biblioteca driverlib
 #include "inc/hw_memmap.h"
+#include "inc/hw_ints.h"
 #include "driverlib/gpio.h"
 #include "driverlib/uart.h"
 #include "driverlib/timer.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/systick.h"
 #include "driverlib/pin_map.h"
+#include "driverlib/interrupt.h"
+#include "utils/uartstdio.h"
 #include "system_TM4C1294.h" 
 
 uint32_t tempoAlta = 0;
+uint32_t timer0load = 5000;
+uint32_t timer1load = 5000;
 uint32_t tempoBaixa = 0;
 uint8_t LED_D2 = 0;
 uint8_t i = 0;
@@ -37,6 +42,35 @@ double periodo = 0;
 int count=0;
 
 extern void UARTStdioIntHandler(void);
+
+//*****************************************************************************
+//
+// The interrupt handler for the first timer interrupt.
+//
+//*****************************************************************************
+void
+Timer0IntHandler(void)
+{
+    printf("\n olaa1 \n");
+    uint32_t timerA = TimerValueGet(TIMER0_BASE, TIMER_A);
+    printf("Timer A: %d\n", timerA);
+    TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+}
+
+//*****************************************************************************
+//
+// The interrupt handler for the second timer interrupt.
+//
+//*****************************************************************************
+void
+Timer1IntHandler(void)
+{
+    printf("\n olaa2 \n");
+    uint32_t timerB = TimerValueGet(TIMER4_BASE, TIMER_A);
+    printf("Timer B: %d\n", timerB);
+    TimerIntClear(TIMER4_BASE, TIMER_TIMA_TIMEOUT);
+}
+
 
 void UARTInit(void){
   // Enable the GPIO Peripheral used by the UART.
@@ -60,49 +94,57 @@ void UART0_Handler(void){
   UARTStdioIntHandler();
 } // UART0_Handler
 
-void duty_cycle(void)
-{
-    uint32_t timerA = TimerValueGet(TIMER0_BASE, TIMER_A);
-    uint32_t timerB = TimerValueGet(TIMER0_BASE, TIMER_B);
-    printf("Timer A: %d\n", timerA);
-    printf("Timer B: %d\n", timerB);
-}
 
 void main(void){
-  UARTInit();
-  
-    // Enable the Timer0 peripheral
+    UARTInit();
+        
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOM);
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOM));
+    GPIOPinConfigure(GPIO_PM4_T4CCP0);
+    GPIOPinTypeTimer(GPIO_PORTM_BASE, GPIO_PIN_4);
+    
     SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);
-  
-    // Wait for the Timer0 module to be ready.
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0)) { }
-  
-    // Configure TimerA as a half-width one-shot timer, and TimerB as a
-    // half-width edge capture counter.
-    TimerConfigure(TIMER0_BASE, (TIMER_CFG_SPLIT_PAIR | TIMER_CFG_B_PERIODIC | TIMER_CFG_B_PERIODIC));
-  
-    // Configure the counter (TimerB) to count both edges.
-    TimerControlEvent(TIMER0_BASE, TIMER_B, TIMER_EVENT_BOTH_EDGES);
-    TimerControlEvent(TIMER0_BASE, TIMER_A, TIMER_EVENT_BOTH_EDGES);
-  
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOL);
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOL));
-    GPIOPinConfigure(GPIO_PL4_T0CCP0);
-    GPIOPinTypeTimer(GPIO_PORTL_BASE, GPIO_PIN_4);
-  
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER4);
+    
+    IntMasterEnable();
+    IntEnable(INT_TIMER0A);
+    IntEnable(INT_TIMER4A);
+    //
+    // Configure the two 32-bit periodic timers.
+    //
+    TimerConfigure(TIMER0_BASE, (TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_CAP_COUNT));
+    TimerConfigure(TIMER4_BASE, (TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_CAP_COUNT));
+    
+    TimerPrescaleSet(TIMER0_BASE, TIMER_A, 255);
+    TimerPrescaleSet(TIMER4_BASE, TIMER_A, 255);
+    
+    TimerMatchSet(TIMER0_BASE, TIMER_A, 0);
+    TimerMatchSet(TIMER4_BASE, TIMER_A, 0);
 
-    // Registers a interrupt function to be called when timer b hits a neg edge event
-    TimerIntRegister(TIMER0_BASE, TIMER_A, duty_cycle);
-    // Makes sure the interrupt is cleared
-    TimerIntClear(TIMER0_BASE, TIMER_CAPA_EVENT);
-    // Enable the indicated timer interrupt source.
-    TimerIntEnable(TIMER0_BASE, TIMER_CAPA_EVENT);
+    TimerControlEvent(TIMER0_BASE, TIMER_A, TIMER_EVENT_POS_EDGE);
+    TimerControlEvent(TIMER4_BASE, TIMER_A, TIMER_EVENT_POS_EDGE);
+          
+    TimerIntRegister(TIMER0_BASE, TIMER_A, Timer0IntHandler);
+    TimerIntRegister(TIMER4_BASE, TIMER_A, Timer1IntHandler);
+    
+    TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+    TimerIntEnable(TIMER4_BASE, TIMER_TIMA_TIMEOUT);
+    
+    TimerEnable(TIMER0_BASE, TIMER_A);
+    TimerEnable(TIMER4_BASE, TIMER_A);  
+    
+    TimerLoadSet(TIMER0_BASE, TIMER_BOTH, timer0load);
+    TimerLoadSet(TIMER4_BASE, TIMER_BOTH, timer1load);
+    //
+    // Enable processor interrupts.
+    //
 
-    // Enable the timers.
-    TimerEnable(TIMER0_BASE, TIMER_BOTH);
-  
+
   while(true) {
-
+    //uint32_t timerA = TimerLoadGet(TIMER4_BASE, TIMER_A);
+    uint32_t timerB = TimerValueGet(TIMER4_BASE, TIMER_A);
+    //printf("Timer A: %d\n", timerA);
+    UARTprintf("Timer B: %d", timerB);
   }
   
   int alta[10];
