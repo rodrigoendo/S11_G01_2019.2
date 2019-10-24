@@ -27700,13 +27700,13 @@
     "scope": null
   },
   {
-    "ID": "c:s11_g01_lab2.c@667@macro@MAX",
+    "ID": "c:s11_g01_lab2.c@630@macro@MAX",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MAX",
     "location": {
       "column": "9",
-      "line": "33",
+      "line": "32",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "MAX",
@@ -27720,7 +27720,7 @@
     "display": "tempoAlta",
     "location": {
       "column": "10",
-      "line": "36",
+      "line": "35",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "tempoAlta",
@@ -27734,24 +27734,10 @@
     "display": "tempoBaixa",
     "location": {
       "column": "10",
-      "line": "37",
+      "line": "36",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "tempoBaixa",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@LED_D2",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "LED_D2",
-    "location": {
-      "column": "9",
-      "line": "38",
-      "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
-    },
-    "name": "LED_D2",
     "origin": "project_file",
     "scope": null
   },
@@ -27762,7 +27748,7 @@
     "display": "i",
     "location": {
       "column": "9",
-      "line": "39",
+      "line": "37",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "i",
@@ -27776,7 +27762,7 @@
     "display": "j",
     "location": {
       "column": "9",
-      "line": "40",
+      "line": "38",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "j",
@@ -27790,7 +27776,7 @@
     "display": "k",
     "location": {
       "column": "9",
-      "line": "41",
+      "line": "39",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "k",
@@ -27804,7 +27790,7 @@
     "display": "periodo",
     "location": {
       "column": "8",
-      "line": "42",
+      "line": "40",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "periodo",
@@ -27818,7 +27804,7 @@
     "display": "freq",
     "location": {
       "column": "8",
-      "line": "43",
+      "line": "41",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "freq",
@@ -27832,7 +27818,7 @@
     "display": "count",
     "location": {
       "column": "5",
-      "line": "44",
+      "line": "42",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "count",
@@ -27846,7 +27832,7 @@
     "display": "start",
     "location": {
       "column": "11",
-      "line": "45",
+      "line": "43",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "start",
@@ -27860,7 +27846,7 @@
     "display": "end",
     "location": {
       "column": "22",
-      "line": "45",
+      "line": "43",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "end",
@@ -27874,7 +27860,7 @@
     "display": "length",
     "location": {
       "column": "31",
-      "line": "45",
+      "line": "43",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "length",
@@ -27888,7 +27874,7 @@
     "display": "alta",
     "location": {
       "column": "5",
-      "line": "46",
+      "line": "44",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "alta",
@@ -27902,7 +27888,7 @@
     "display": "baixa",
     "location": {
       "column": "5",
-      "line": "47",
+      "line": "45",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "baixa",
@@ -27916,7 +27902,7 @@
     "display": "dutyCycle",
     "location": {
       "column": "8",
-      "line": "48",
+      "line": "46",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "dutyCycle",
@@ -27930,7 +27916,7 @@
     "display": "void UARTStdioIntHandler(void)",
     "location": {
       "column": "13",
-      "line": "51",
+      "line": "48",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "UARTStdioIntHandler",
@@ -27944,7 +27930,7 @@
     "display": "void UARTInit(void)",
     "location": {
       "column": "6",
-      "line": "53",
+      "line": "50",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "UARTInit",
@@ -27958,7 +27944,7 @@
     "display": "void UART0_Handler(void)",
     "location": {
       "column": "6",
-      "line": "71",
+      "line": "68",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "UART0_Handler",
@@ -27972,7 +27958,7 @@
     "display": "void TIMER0A_Handler(void)",
     "location": {
       "column": "6",
-      "line": "75",
+      "line": "72",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "TIMER0A_Handler",
@@ -27986,7 +27972,7 @@
     "display": "void TIMER0B_Handler(void)",
     "location": {
       "column": "6",
-      "line": "83",
+      "line": "80",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "TIMER0B_Handler",
@@ -28000,7 +27986,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "92",
+      "line": "89",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "main",
@@ -28008,13 +27994,13 @@
     "scope": null
   },
   {
-    "ID": "c:s11_g01_lab2.c@5028@F@main@str",
+    "ID": "c:s11_g01_lab2.c@4856@F@main@str",
     "What": "Variable",
     "defdec": "Def",
     "display": "str",
     "location": {
       "column": "8",
-      "line": "178",
+      "line": "172",
       "path": "C:\\Users\\rodri\\Desktop\\Nova pasta\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "str",

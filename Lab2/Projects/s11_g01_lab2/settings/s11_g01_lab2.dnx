@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <settings>
     <LMIFTDIDriver>
-        <LMIFTDIserialNo>0F00B433</LMIFTDIserialNo>
+        <LMIFTDIserialNo>0F00A5B1</LMIFTDIserialNo>
         <LMIFTDIfoundProbes />
     </LMIFTDIDriver>
     <DebugChecksum>
-        <Checksum>3517360702</Checksum>
+        <Checksum>3556007338</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>

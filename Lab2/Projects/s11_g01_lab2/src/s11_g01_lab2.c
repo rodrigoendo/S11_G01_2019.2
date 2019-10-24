@@ -17,7 +17,6 @@ Semestre:
 #include <stdbool.h>
 #include <stdio.h>
 #include <math.h>
-// Includes da biblioteca driverlib
 #include "inc/hw_memmap.h"
 #include "inc/hw_ints.h"
 #include "driverlib/gpio.h"
@@ -35,7 +34,6 @@ Semestre:
 // Global variables
 uint32_t tempoAlta = 0;
 uint32_t tempoBaixa = 0;
-uint8_t LED_D2 = 0;
 uint8_t i = 0;
 uint8_t j = 0;
 uint8_t k = 0;
@@ -46,7 +44,6 @@ uint32_t  start = 0, end = 0, length = 0;
 int alta[30];
 int baixa[30];
 double dutyCycle = 0;
-
 
 extern void UARTStdioIntHandler(void);
 
@@ -131,10 +128,7 @@ void main(void){
   // Configura o TIMER 1 como sendo um TIMER se 64 bits periodico.
   TimerConfigure(TIMER1_BASE, TIMER_CFG_PERIODIC_UP);
   
-  //TimerLoadSet(TIMER0_BASE, TIMER_BOTH, 0x9C3F);
-  
-  // Define o TIPO de evento que o TIMER deve gerenciar. 
-  // Por tipo de evento se entende se é uma BORDA de SUBIDA, DESCIDA ou ambas as bordas
+  // Define o TIPO de evento que o TIMER deve gerenciar: Borda de SUBIDA, DESCIDA ou ambas as bordas.
   TimerControlEvent(TIMER0_BASE, TIMER_A, TIMER_EVENT_POS_EDGE); // SUBIDA
   TimerControlEvent(TIMER0_BASE, TIMER_B, TIMER_EVENT_NEG_EDGE); // DESCIDA
     
@@ -142,15 +136,15 @@ void main(void){
   TimerIntRegister(TIMER0_BASE, TIMER_A, TIMER0A_Handler);
   TimerIntRegister(TIMER0_BASE, TIMER_B, TIMER0B_Handler);
 
-  // Makes sure the interrupt is cleared
+  // Limpa as interrupcoes.
   TimerIntClear(TIMER0_BASE, TIMER_CAPA_EVENT);
   TimerIntClear(TIMER0_BASE, TIMER_CAPB_EVENT);
   
-  // Enable the indicated timer interrupt source.
+  // Habilita as fontes de interrupcao dos Tinmers.
   TimerIntEnable(TIMER0_BASE, TIMER_CAPA_EVENT);
   TimerIntEnable(TIMER0_BASE, TIMER_CAPB_EVENT);
 
-  // Habilita os timers.
+  // Habilita os Timers.
   TimerEnable(TIMER0_BASE, TIMER_A);
   TimerEnable(TIMER0_BASE, TIMER_B);
   TimerEnable(TIMER1_BASE, TIMER_BOTH);
@@ -178,6 +172,4 @@ void main(void){
   char str[MAX] = "";
   sprintf(str, "DutyCycle: %.1f % | Frequency: %.2f Hz", dutyCycle, freq);
   UARTprintf("%s", str);
-  
-  i++;
 } // main
