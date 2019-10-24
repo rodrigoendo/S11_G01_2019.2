@@ -1,16 +1,16 @@
-"C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\src\system_TM4C1294_TW.c"
+"C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\src\system_TM4C1294_TW.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\system_TM4C1294_TW.pbi.dep
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\system_TM4C1294_TW.pbi.dep
 -o
 system_TM4C1294_TW.pbi
 -I
-C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\src
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\src
 -I
-C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\..\..\TivaWare_C_Series-2.1.4.178
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\..\..\TivaWare_C_Series-2.1.4.178
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\Core\Include
 -I
@@ -20,7 +20,7 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\c
 -I
-C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\Core\Include
 -I

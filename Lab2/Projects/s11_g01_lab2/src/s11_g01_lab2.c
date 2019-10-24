@@ -45,6 +45,7 @@ int count=0;
 uint32_t  start = 0, end = 0, length = 0;
 int alta[30];
 int baixa[30];
+double dutyCycle = 0;
 
 
 extern void UARTStdioIntHandler(void);
@@ -76,7 +77,6 @@ void TIMER0A_Handler(void)
   TimerIntClear(TIMER0_BASE, TIMER_CAPA_EVENT);
   start = TimerValueGet64(TIMER1_BASE);
   tempoBaixa = start-end;
- 
   baixa[i]=tempoBaixa;
 }
 
@@ -171,7 +171,7 @@ void main(void){
   tempoBaixa = tempoBaixa/28;
   
   periodo = ((double)tempoAlta+(double)tempoBaixa)/18000000.00;
-  double dutyCycle = (double)tempoAlta/((double)tempoAlta+(double)tempoBaixa);
+  dutyCycle = (double)tempoAlta/((double)tempoAlta+(double)tempoBaixa);
   dutyCycle = dutyCycle*100;
   freq = 1/periodo;
   

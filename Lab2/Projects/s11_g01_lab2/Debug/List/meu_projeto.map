@@ -1,23 +1,30 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.40.1.212/W32 for ARM                  24/Oct/2019  18:58:49
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  24/Oct/2019  19:18:53
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Exe\meu_projeto.out
+#        C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Exe\meu_projeto.out
 #    Map file     =
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\List\meu_projeto.map
+#        C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\List\meu_projeto.map
 #    Command line =
-#        -f C:\Users\rodri\AppData\Local\Temp\EW6C5B.tmp
-#        (C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\ewarm\Exe\driverlib.a
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\s11_g01_lab2.o
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\startup_TM4C1294.o
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\system_TM4C1294_TW.o
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\uartstdio.o
-#        --no_out_extension -o
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Exe\meu_projeto.out
-#        --map
-#        C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\List\meu_projeto.map
+#        -f C:\Users\rodri\AppData\Local\Temp\EWCBF3.tmp
+#        ("C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\TivaWare_C_Series-2.1.4.178\driverlib\ewarm\Exe\driverlib.a"
+#        "C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\s11_g01_lab2.o"
+#        "C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\startup_TM4C1294.o"
+#        "C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\system_TM4C1294_TW.o"
+#        "C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj\uartstdio.o"
+#        --no_out_extension -o "C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Exe\meu_projeto.out"
+#        --map "C:\Users\rodri\Desktop\Nova
+#        pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\List\meu_projeto.map"
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.3\arm\config\linker\TexasInstruments\TM4C1294NC.icf" --semihosting
 #        --entry __iar_program_start --vfe --text_out locale)
@@ -59,84 +66,91 @@ define block HEAP with size = 64K, alignment = 8 { };
   .intvec          ro code          0x0   0x3c0  startup_TM4C1294.o [1]
                                 - 0x3c0   0x3c0
 
-"P1":                                    0x2e0c
-  .text            ro code        0x3c0   0xdaa  xprintflarge_nomb.o [2]
-  .text            ro code       0x116a    0x3a  zero_init3.o [5]
-  .text            ro code       0x11a4    0x16  strchr.o [5]
-  .text            ro code       0x11ba     0xa  xsprout.o [2]
-  .text            ro code       0x11c4    0x40  xfail_s.o [2]
-  .text            ro code       0x1204    0x36  strlen.o [5]
-  .text            ro code       0x123a     0x2  startup_TM4C1294.o [1]
-  .text            ro code       0x123c    0x58  memchr.o [5]
-  .text            ro code       0x1294    0xa6  ABImemcpy.o [5]
-  .text            ro code       0x133c    0x70  frexp.o [4]
-  .text            ro code       0x13ac   0x246  DblDiv.o [4]
-  .text            ro code       0x15f4    0x28  DblToU32.o [4]
-  .text            ro code       0x161c    0x1a  U32ToDbl.o [4]
-  .text            ro code       0x1638    0xe2  DblSub.o [4]
-  .text            ro code       0x171c   0x1a2  DblMul.o [4]
-  .text            ro code       0x18c0   0x230  I64DivMod.o [5]
-  .text            ro code       0x1af0     0x6  abort.o [2]
-  .text            ro code       0x1af8   0x17a  DblAdd.o [4]
-  .text            ro code       0x1c74     0x2  I64DivZer.o [5]
-  .text            ro code       0x1c78    0x14  exit.o [6]
-  .text            ro code       0x1c8c   0x518  uartstdio.o [1]
-  .text            ro code       0x21a4   0x11c  interrupt.o [3]
-  .text            ro code       0x22c0   0x114  uart.o [3]
-  .text            ro code       0x23d4   0x2ac  sysctl.o [3]
-  .text            ro code       0x2680    0x10  cpu.o [3]
-  .text            ro code       0x2690   0x338  s11_g01_lab2.o [1]
-  .text            ro code       0x29c8   0x1a0  gpio.o [3]
-  .text            ro code       0x2b68   0x120  timer.o [3]
-  .text            ro code       0x2c88     0x6  ABImemclr.o [5]
-  .text            ro code       0x2c90    0x40  sprintf.o [2]
-  .text            ro code       0x2cd0    0x5e  ABImemset.o [5]
-  .rodata          const         0x2d30   0x1b0  sysctl.o [3]
-  .rodata          const         0x2ee0    0xa0  timer.o [3]
-  .rodata          const         0x2f80    0x90  gpio.o [3]
-  .rodata          const         0x3010    0x6c  sysctl.o [3]
-  .rodata          const         0x307c    0x30  sysctl.o [3]
-  .text            ro code       0x30ac    0x2c  system_TM4C1294_TW.o [1]
-  .text            ro code       0x30d8    0x28  data_init.o [5]
-  .rodata          const         0x3100    0x24  s11_g01_lab2.o [1]
-  .iar.init_table  const         0x3124    0x10  - Linker created -
-  .text            ro code       0x3134    0x1e  cmain.o [5]
-  .text            ro code       0x3152     0x4  low_level_init.o [2]
-  .text            ro code       0x3156     0x4  exit.o [2]
-  .text            ro code       0x315c     0xa  cexit.o [5]
-  .rodata          const         0x3168    0x14  uartstdio.o [1]
-  .text            ro code       0x317c    0x14  startup_TM4C1294.o [1]
-  .rodata          const         0x3190     0xc  uartstdio.o [1]
-  .rodata          const         0x319c     0xc  uartstdio.o [1]
-  .rodata          const         0x31a8     0xc  uartstdio.o [1]
-  .text            ro code       0x31b4     0xc  cstartup_M.o [5]
-  .rodata          const         0x31c0     0x8  uartstdio.o [1]
-  .rodata          const         0x31c8     0x4  uartstdio.o [1]
-  .rodata          const         0x31cc     0x0  zero_init3.o [5]
-                               - 0x31cc  0x2e0c
+"P1":                                    0x3210
+  .text            ro code        0x3c0   0xfaa  xprintffull_nomb.o [2]
+  .text            ro code       0x136a    0x3a  zero_init3.o [5]
+  .text            ro code       0x13a4    0x16  strchr.o [5]
+  .text            ro code       0x13ba     0xa  xsprout.o [2]
+  .text            ro code       0x13c4    0x40  xfail_s.o [2]
+  .text            ro code       0x1404    0x36  strlen.o [5]
+  .text            ro code       0x143a     0x2  startup_TM4C1294.o [1]
+  .text            ro code       0x143c    0x58  memchr.o [5]
+  .text            ro code       0x1494    0xa6  ABImemcpy.o [5]
+  .text            ro code       0x153c    0x70  frexp.o [4]
+  .text            ro code       0x15ac    0x2e  DblCmpLe.o [4]
+  .text            ro code       0x15dc    0x2e  DblCmpGe.o [4]
+  .text            ro code       0x160c   0x13a  ldexp.o [4]
+  .text            ro code       0x1748    0x3a  DblToS32.o [4]
+  .text            ro code       0x1784    0x22  S32ToDbl.o [4]
+  .text            ro code       0x17a8    0xe2  DblSub.o [4]
+  .text            ro code       0x188c   0x246  DblDiv.o [4]
+  .text            ro code       0x1ad4    0x28  DblToU32.o [4]
+  .text            ro code       0x1afc    0x1a  U32ToDbl.o [4]
+  .text            ro code       0x1b18   0x1a2  DblMul.o [4]
+  .text            ro code       0x1cbc   0x230  I64DivMod.o [5]
+  .text            ro code       0x1eec     0x6  abort.o [2]
+  .text            ro code       0x1ef4   0x17a  DblAdd.o [4]
+  .text            ro code       0x2070     0x2  I64DivZer.o [5]
+  .text            ro code       0x2074    0x14  exit.o [6]
+  .text            ro code       0x2088   0x518  uartstdio.o [1]
+  .text            ro code       0x25a0   0x11c  interrupt.o [3]
+  .text            ro code       0x26bc   0x114  uart.o [3]
+  .text            ro code       0x27d0   0x2ac  sysctl.o [3]
+  .text            ro code       0x2a7c    0x10  cpu.o [3]
+  .text            ro code       0x2a8c   0x334  s11_g01_lab2.o [1]
+  .text            ro code       0x2dc0   0x1a0  gpio.o [3]
+  .text            ro code       0x2f60   0x120  timer.o [3]
+  .text            ro code       0x3080     0x6  ABImemclr.o [5]
+  .text            ro code       0x3088    0x40  sprintf.o [2]
+  .text            ro code       0x30c8    0x5e  ABImemset.o [5]
+  .rodata          const         0x3128   0x1b0  sysctl.o [3]
+  .rodata          const         0x32d8    0xa0  timer.o [3]
+  .rodata          const         0x3378    0x90  gpio.o [3]
+  .rodata          const         0x3408    0x6c  sysctl.o [3]
+  .rodata          const         0x3474    0x30  sysctl.o [3]
+  .text            ro code       0x34a4    0x2c  system_TM4C1294_TW.o [1]
+  .rodata          const         0x34d0    0x28  s11_g01_lab2.o [1]
+  .text            ro code       0x34f8    0x28  data_init.o [5]
+  .iar.init_table  const         0x3520    0x10  - Linker created -
+  .text            ro code       0x3530    0x1e  cmain.o [5]
+  .text            ro code       0x354e     0x4  low_level_init.o [2]
+  .text            ro code       0x3552     0x4  exit.o [2]
+  .text            ro code       0x3558     0xa  cexit.o [5]
+  .rodata          const         0x3564    0x14  uartstdio.o [1]
+  .text            ro code       0x3578    0x14  startup_TM4C1294.o [1]
+  .rodata          const         0x358c     0xc  uartstdio.o [1]
+  .rodata          const         0x3598     0xc  uartstdio.o [1]
+  .rodata          const         0x35a4     0xc  uartstdio.o [1]
+  .text            ro code       0x35b0     0xc  cstartup_M.o [5]
+  .rodata          const         0x35bc     0x8  uartstdio.o [1]
+  .rodata          const         0x35c4     0x8  xprintffull_nomb.o [2]
+  .rodata          const         0x35cc     0x4  uartstdio.o [1]
+  .rodata          const         0x35d0     0x0  zero_init3.o [5]
+                               - 0x35d0  0x3210
 
-"P2", part 1 of 2:                        0x5b0
+"P2", part 1 of 2:                        0x5b8
   .bss             zero     0x2000'0000   0x400  uartstdio.o [1]
   .bss             zero     0x2000'0400    0x80  uartstdio.o [1]
   .bss             zero     0x2000'0480    0x78  s11_g01_lab2.o [1]
   .bss             zero     0x2000'04f8    0x78  s11_g01_lab2.o [1]
   .bss             zero     0x2000'0570     0x8  s11_g01_lab2.o [1]
   .bss             zero     0x2000'0578     0x8  s11_g01_lab2.o [1]
-  .bss             zero     0x2000'0580     0x4  s11_g01_lab2.o [1]
-  .bss             zero     0x2000'0584     0x4  s11_g01_lab2.o [1]
+  .bss             zero     0x2000'0580     0x8  s11_g01_lab2.o [1]
   .bss             zero     0x2000'0588     0x4  s11_g01_lab2.o [1]
   .bss             zero     0x2000'058c     0x4  s11_g01_lab2.o [1]
-  .bss             zero     0x2000'0590     0x4  uartstdio.o [1]
-  .bss             zero     0x2000'0594     0x4  uartstdio.o [1]
+  .bss             zero     0x2000'0590     0x4  s11_g01_lab2.o [1]
+  .bss             zero     0x2000'0594     0x4  s11_g01_lab2.o [1]
   .bss             zero     0x2000'0598     0x4  uartstdio.o [1]
   .bss             zero     0x2000'059c     0x4  uartstdio.o [1]
   .bss             zero     0x2000'05a0     0x4  uartstdio.o [1]
   .bss             zero     0x2000'05a4     0x4  uartstdio.o [1]
-  .bss             zero     0x2000'05a8     0x4  xfail_s.o [2]
-  .bss             zero     0x2000'05ac     0x1  s11_g01_lab2.o [1]
-  .bss             zero     0x2000'05ad     0x1  uartstdio.o [1]
-  .bss             zero     0x2000'05ae     0x1  uartstdio.o [1]
-                          - 0x2000'05af   0x5af
+  .bss             zero     0x2000'05a8     0x4  uartstdio.o [1]
+  .bss             zero     0x2000'05ac     0x4  uartstdio.o [1]
+  .bss             zero     0x2000'05b0     0x4  xfail_s.o [2]
+  .bss             zero     0x2000'05b4     0x1  s11_g01_lab2.o [1]
+  .bss             zero     0x2000'05b5     0x1  uartstdio.o [1]
+  .bss             zero     0x2000'05b6     0x1  uartstdio.o [1]
+                          - 0x2000'05b7   0x5b7
 
 "P2", part 2 of 2:                       0x8270
   VTABLE           uninit   0x2000'0800   0x26c  interrupt.o [3]
@@ -149,8 +163,8 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-       0x31cc     0xf'ffff  0xf'ce34
-  0x2000'05b0  0x2000'07ff     0x250
+       0x35d0     0xf'ffff  0xf'ca30
+  0x2000'05b8  0x2000'07ff     0x248
   0x2000'8a70  0x2003'ffff  0x3'7590
 
 
@@ -161,8 +175,8 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x5af:
-          0x2000'0000  0x5af
+    1 destination range, total size 0x5b7:
+          0x2000'0000  0x5b7
 
 
 
@@ -176,13 +190,13 @@ command line/config:
     -----------------------------------------------
     Total:
 
-C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj: [1]
-    s11_g01_lab2.o            824       36      273
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj: [1]
+    s11_g01_lab2.o            820       40      281
     startup_TM4C1294.o        982
     system_TM4C1294_TW.o       44                 4
     uartstdio.o             1'304       68    1'178
     -----------------------------------------------
-    Total:                  3'154      104    1'455
+    Total:                  3'150      108    1'463
 
 dl7M_tln.a: [2]
     abort.o                     6
@@ -190,10 +204,10 @@ dl7M_tln.a: [2]
     low_level_init.o            4
     sprintf.o                  64
     xfail_s.o                  64                 4
-    xprintflarge_nomb.o     3'498
+    xprintffull_nomb.o      4'010        8
     xsprout.o                  10
     -----------------------------------------------
-    Total:                  3'650                 4
+    Total:                  4'162        8        4
 
 driverlib.a: [3]
     cpu.o                      16
@@ -207,14 +221,19 @@ driverlib.a: [3]
 
 m7M_tls.a: [4]
     DblAdd.o                  378
+    DblCmpGe.o                 46
+    DblCmpLe.o                 46
     DblDiv.o                  582
     DblMul.o                  418
     DblSub.o                  226
+    DblToS32.o                 58
     DblToU32.o                 40
+    S32ToDbl.o                 34
     U32ToDbl.o                 26
     frexp.o                   112
+    ldexp.o                   314
     -----------------------------------------------
-    Total:                  1'782
+    Total:                  2'280
 
 rt7M_tl.a: [5]
     ABImemclr.o                 6
@@ -238,10 +257,10 @@ shb_l.a: [6]
     -----------------------------------------------
     Total:                     20
 
-    Gaps                       20        4
+    Gaps                       30        4
     Linker created                      16   32'768
 ---------------------------------------------------
-    Grand Total:           11'732    1'016   34'847
+    Grand Total:           12'748    1'028   34'855
 
 
 *******************************************************************************
@@ -250,169 +269,183 @@ shb_l.a: [6]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base        0x3124          --   Gb  - Linker created -
-.iar.init_table$$Limit       0x3134          --   Gb  - Linker created -
-?main                        0x3135         Code  Gb  cmain.o [5]
-CPUcpsid                     0x2681    0x8  Code  Gb  cpu.o [3]
-CPUcpsie                     0x2689    0x8  Code  Gb  cpu.o [3]
+.iar.init_table$$Base        0x3520          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x3530          --   Gb  - Linker created -
+?main                        0x3531         Code  Gb  cmain.o [5]
+CPUcpsid                     0x2a7d    0x8  Code  Gb  cpu.o [3]
+CPUcpsie                     0x2a85    0x8  Code  Gb  cpu.o [3]
 CSTACK$$Base            0x2000'0a70          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'8a70          --   Gb  - Linker created -
-GPIODirModeSet               0x29c9   0x28  Code  Gb  gpio.o [3]
-GPIOPadConfigSet             0x29f1  0x102  Code  Gb  gpio.o [3]
-GPIOPinConfigure             0x2b27   0x36  Code  Gb  gpio.o [3]
-GPIOPinTypeTimer             0x2aff   0x14  Code  Gb  gpio.o [3]
-GPIOPinTypeUART              0x2b13   0x14  Code  Gb  gpio.o [3]
-IntDisable                   0x222d   0x46  Code  Gb  interrupt.o [3]
-IntEnable                    0x21e5   0x46  Code  Gb  interrupt.o [3]
-IntMasterDisable             0x21ad    0x6  Code  Gb  interrupt.o [3]
-IntMasterEnable              0x21a5    0x8  Code  Gb  interrupt.o [3]
-IntRegister                  0x21bb   0x28  Code  Gb  interrupt.o [3]
-IsBufferEmpty                0x1ca9   0x12  Code  Lc  uartstdio.o [1]
-IsBufferFull                 0x1c8d   0x1c  Code  Lc  uartstdio.o [1]
-Region$$Table$$Base          0x3124          --   Gb  - Linker created -
-Region$$Table$$Limit         0x3134          --   Gb  - Linker created -
-SysCtlClockFreqSet           0x243f  0x1fc  Code  Gb  sysctl.o [3]
-SysCtlPeripheralEnable       0x2421    0x8  Code  Gb  sysctl.o [3]
+GPIODirModeSet               0x2dc1   0x28  Code  Gb  gpio.o [3]
+GPIOPadConfigSet             0x2de9  0x102  Code  Gb  gpio.o [3]
+GPIOPinConfigure             0x2f1f   0x36  Code  Gb  gpio.o [3]
+GPIOPinTypeTimer             0x2ef7   0x14  Code  Gb  gpio.o [3]
+GPIOPinTypeUART              0x2f0b   0x14  Code  Gb  gpio.o [3]
+IntDisable                   0x2629   0x46  Code  Gb  interrupt.o [3]
+IntEnable                    0x25e1   0x46  Code  Gb  interrupt.o [3]
+IntMasterDisable             0x25a9    0x6  Code  Gb  interrupt.o [3]
+IntMasterEnable              0x25a1    0x8  Code  Gb  interrupt.o [3]
+IntRegister                  0x25b7   0x28  Code  Gb  interrupt.o [3]
+IsBufferEmpty                0x20a5   0x12  Code  Lc  uartstdio.o [1]
+IsBufferFull                 0x2089   0x1c  Code  Lc  uartstdio.o [1]
+Region$$Table$$Base          0x3520          --   Gb  - Linker created -
+Region$$Table$$Limit         0x3530          --   Gb  - Linker created -
+SysCtlClockFreqSet           0x283b  0x1fc  Code  Gb  sysctl.o [3]
+SysCtlPeripheralEnable       0x281d    0x8  Code  Gb  sysctl.o [3]
 SysCtlPeripheralPresent
-                             0x23f5    0xa  Code  Gb  sysctl.o [3]
-SysCtlPeripheralReady        0x23ff    0x8  Code  Gb  sysctl.o [3]
+                             0x27f1    0xa  Code  Gb  sysctl.o [3]
+SysCtlPeripheralReady        0x27fb    0x8  Code  Gb  sysctl.o [3]
 SystemCoreClock         0x2000'0a6c    0x4  Data  Gb  system_TM4C1294_TW.o [1]
-SystemInit                   0x30ad   0x1a  Code  Gb  system_TM4C1294_TW.o [1]
-TIMER0A_Handler              0x26e7   0x2e  Code  Gb  s11_g01_lab2.o [1]
-TIMER0B_Handler              0x2715   0x36  Code  Gb  s11_g01_lab2.o [1]
-TimerConfigure               0x2bc9   0x54  Code  Gb  timer.o [3]
-TimerControlEvent            0x2c31   0x16  Code  Gb  timer.o [3]
-TimerDisable                 0x2bb7   0x12  Code  Gb  timer.o [3]
-TimerEnable                  0x2ba7   0x10  Code  Gb  timer.o [3]
-TimerIntClear                0x2c83    0x6  Code  Gb  timer.o [3]
-TimerIntEnable               0x2c79    0xa  Code  Gb  timer.o [3]
-TimerIntRegister             0x2c5f   0x1a  Code  Gb  timer.o [3]
-TimerValueGet64              0x2c47   0x18  Code  Gb  timer.o [3]
-UART0_Handler                0x26df    0x8  Code  Gb  s11_g01_lab2.o [1]
-UARTCharGetNonBlocking       0x2387   0x14  Code  Gb  uart.o [3]
-UARTCharPutNonBlocking       0x239b   0x16  Code  Gb  uart.o [3]
-UARTCharsAvail               0x236f    0x8  Code  Gb  uart.o [3]
-UARTConfigSetExpClk          0x22c9   0x5c  Code  Gb  uart.o [3]
-UARTDisable                  0x233f   0x22  Code  Gb  uart.o [3]
-UARTEnable                   0x2325   0x1a  Code  Gb  uart.o [3]
-UARTFIFOLevelSet             0x22c1    0x8  Code  Gb  uart.o [3]
-UARTFlushRx                  0x1ff9   0x1c  Code  Gb  uartstdio.o [1]
-UARTFlushTx                  0x2015   0x30  Code  Gb  uartstdio.o [1]
-UARTInit                     0x2691   0x4e  Code  Gb  s11_g01_lab2.o [1]
-UARTIntClear                 0x23cf    0x6  Code  Gb  uart.o [3]
-UARTIntDisable               0x23b7    0x4  Code  Gb  uart.o [3]
-UARTIntEnable                0x23b1    0x6  Code  Gb  uart.o [3]
-UARTIntStatus                0x23c3    0xc  Code  Gb  uart.o [3]
-UARTPrimeTransmit            0x1cbb   0x6a  Code  Lc  uartstdio.o [1]
-UARTSpaceAvail               0x2377    0x6  Code  Gb  uart.o [3]
-UARTStdioConfig              0x1d25   0x7e  Code  Gb  uartstdio.o [1]
-UARTStdioIntHandler          0x2049  0x116  Code  Gb  uartstdio.o [1]
+SystemInit                   0x34a5   0x1a  Code  Gb  system_TM4C1294_TW.o [1]
+TIMER0A_Handler              0x2ae3   0x2e  Code  Gb  s11_g01_lab2.o [1]
+TIMER0B_Handler              0x2b11   0x36  Code  Gb  s11_g01_lab2.o [1]
+TimerConfigure               0x2fc1   0x54  Code  Gb  timer.o [3]
+TimerControlEvent            0x3029   0x16  Code  Gb  timer.o [3]
+TimerDisable                 0x2faf   0x12  Code  Gb  timer.o [3]
+TimerEnable                  0x2f9f   0x10  Code  Gb  timer.o [3]
+TimerIntClear                0x307b    0x6  Code  Gb  timer.o [3]
+TimerIntEnable               0x3071    0xa  Code  Gb  timer.o [3]
+TimerIntRegister             0x3057   0x1a  Code  Gb  timer.o [3]
+TimerValueGet64              0x303f   0x18  Code  Gb  timer.o [3]
+UART0_Handler                0x2adb    0x8  Code  Gb  s11_g01_lab2.o [1]
+UARTCharGetNonBlocking       0x2783   0x14  Code  Gb  uart.o [3]
+UARTCharPutNonBlocking       0x2797   0x16  Code  Gb  uart.o [3]
+UARTCharsAvail               0x276b    0x8  Code  Gb  uart.o [3]
+UARTConfigSetExpClk          0x26c5   0x5c  Code  Gb  uart.o [3]
+UARTDisable                  0x273b   0x22  Code  Gb  uart.o [3]
+UARTEnable                   0x2721   0x1a  Code  Gb  uart.o [3]
+UARTFIFOLevelSet             0x26bd    0x8  Code  Gb  uart.o [3]
+UARTFlushRx                  0x23f5   0x1c  Code  Gb  uartstdio.o [1]
+UARTFlushTx                  0x2411   0x30  Code  Gb  uartstdio.o [1]
+UARTInit                     0x2a8d   0x4e  Code  Gb  s11_g01_lab2.o [1]
+UARTIntClear                 0x27cb    0x6  Code  Gb  uart.o [3]
+UARTIntDisable               0x27b3    0x4  Code  Gb  uart.o [3]
+UARTIntEnable                0x27ad    0x6  Code  Gb  uart.o [3]
+UARTIntStatus                0x27bf    0xc  Code  Gb  uart.o [3]
+UARTPrimeTransmit            0x20b7   0x6a  Code  Lc  uartstdio.o [1]
+UARTSpaceAvail               0x2773    0x6  Code  Gb  uart.o [3]
+UARTStdioConfig              0x2121   0x7e  Code  Gb  uartstdio.o [1]
+UARTStdioIntHandler          0x2445  0x116  Code  Gb  uartstdio.o [1]
 UARTStdioIntHandler::bLastWasCR
-                        0x2000'05ae    0x1  Data  Lc  uartstdio.o [1]
-UARTprintf                   0x1feb    0xe  Code  Gb  uartstdio.o [1]
-UARTvprintf                  0x1e35  0x1b6  Code  Gb  uartstdio.o [1]
-UARTwrite                    0x1da3   0x92  Code  Gb  uartstdio.o [1]
-_LitobLargeNoMb               0xf3f  0x10a  Code  Lc  xprintflarge_nomb.o [2]
-_PrintfLargeNoMb              0x3c1  0xb78  Code  Gb  xprintflarge_nomb.o [2]
-_PutcharLargeNoMb            0x10b1   0x20  Code  Lc  xprintflarge_nomb.o [2]
-_PutcharsLargeNoMb           0x10d1   0x2e  Code  Lc  xprintflarge_nomb.o [2]
-_SProut                      0x11bb    0xa  Code  Gb  xsprout.o [2]
-_SysCtlMemTimingGet          0x23d5   0x20  Code  Lc  sysctl.o [3]
-_TimerIntNumberGet           0x2b69   0x3e  Code  Lc  timer.o [3]
+                        0x2000'05b6    0x1  Data  Lc  uartstdio.o [1]
+UARTprintf                   0x23e7    0xe  Code  Gb  uartstdio.o [1]
+UARTvprintf                  0x2231  0x1b6  Code  Gb  uartstdio.o [1]
+UARTwrite                    0x219f   0x92  Code  Gb  uartstdio.o [1]
+_LitobFullNoMb               0x1165  0x10a  Code  Lc  xprintffull_nomb.o [2]
+_PrintfFullNoMb               0x3c1  0xd80  Code  Gb  xprintffull_nomb.o [2]
+_PutcharFullNoMb             0x12d5   0x20  Code  Lc  xprintffull_nomb.o [2]
+_PutcharsFullNoMb            0x12f5   0x2e  Code  Lc  xprintffull_nomb.o [2]
+_SProut                      0x13bb    0xa  Code  Gb  xsprout.o [2]
+_SysCtlMemTimingGet          0x27d1   0x20  Code  Lc  sysctl.o [3]
+_TimerIntNumberGet           0x2f61   0x3e  Code  Lc  timer.o [3]
 __Vectors                       0x0          --   Gb  startup_TM4C1294.o [1]
 __Vectors_End                 0x3c0         Data  Gb  startup_TM4C1294.o [1]
 __Vectors_Size {Abs}          0x3c0          --   Gb  startup_TM4C1294.o [1]
-__aeabi_d2uiz                0x15f5         Code  Gb  DblToU32.o [4]
-__aeabi_dadd                 0x1af9         Code  Gb  DblAdd.o [4]
-__aeabi_ddiv                 0x13ad         Code  Gb  DblDiv.o [4]
-__aeabi_dmul                 0x171d         Code  Gb  DblMul.o [4]
-__aeabi_dsub                 0x1639         Code  Gb  DblSub.o [4]
-__aeabi_ldiv0                0x1c75         Code  Gb  I64DivZer.o [5]
-__aeabi_memclr               0x2c89         Code  Gb  ABImemclr.o [5]
-__aeabi_memcpy               0x1295         Code  Gb  ABImemcpy.o [5]
-__aeabi_memcpy4              0x12b5         Code  Gb  ABImemcpy.o [5]
-__aeabi_memcpy8              0x12b5         Code  Gb  ABImemcpy.o [5]
-__aeabi_ui2d                 0x161d         Code  Gb  U32ToDbl.o [4]
-__aeabi_uldivmod             0x18c1         Code  Gb  I64DivMod.o [5]
-__cmain                      0x3135         Code  Gb  cmain.o [5]
-__exit                       0x1c79   0x14  Code  Gb  exit.o [6]
-__iar_Fail_s                 0x11c5   0x1c  Code  Gb  xfail_s.o [2]
-__iar_Memchr                 0x123d         Code  Gb  memchr.o [5]
-__iar_Memset_word            0x2cd1         Code  Gb  ABImemset.o [5]
-__iar_Strchr                 0x11a5         Code  Gb  strchr.o [5]
-__iar_dadd                   0x1649         Code  Gb  DblSub.o [4]
-__iar_data_init3             0x30d9   0x28  Code  Gb  data_init.o [5]
-__iar_dsub                   0x1b09         Code  Gb  DblAdd.o [4]
-__iar_dsubStart              0x1b1b         Code  Gb  DblAdd.o [4]
-__iar_frexp                  0x1349         Code  Gb  frexp.o [4]
-__iar_frexpl                 0x1349         Code  Gb  frexp.o [4]
-__iar_init_vfp               0x3185         Code  Wk  startup_TM4C1294.o [1]
-__iar_program_start          0x31b5         Code  Gb  cstartup_M.o [5]
+__aeabi_cdcmple              0x15ad         Code  Gb  DblCmpLe.o [4]
+__aeabi_cdrcmple             0x15dd         Code  Gb  DblCmpGe.o [4]
+__aeabi_d2iz                 0x1749         Code  Gb  DblToS32.o [4]
+__aeabi_d2uiz                0x1ad5         Code  Gb  DblToU32.o [4]
+__aeabi_dadd                 0x1ef5         Code  Gb  DblAdd.o [4]
+__aeabi_ddiv                 0x188d         Code  Gb  DblDiv.o [4]
+__aeabi_dmul                 0x1b19         Code  Gb  DblMul.o [4]
+__aeabi_dsub                 0x17a9         Code  Gb  DblSub.o [4]
+__aeabi_i2d                  0x1785         Code  Gb  S32ToDbl.o [4]
+__aeabi_ldiv0                0x2071         Code  Gb  I64DivZer.o [5]
+__aeabi_memclr               0x3081         Code  Gb  ABImemclr.o [5]
+__aeabi_memcpy               0x1495         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy4              0x14b5         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8              0x14b5         Code  Gb  ABImemcpy.o [5]
+__aeabi_ui2d                 0x1afd         Code  Gb  U32ToDbl.o [4]
+__aeabi_uldivmod             0x1cbd         Code  Gb  I64DivMod.o [5]
+__cmain                      0x3531         Code  Gb  cmain.o [5]
+__exit                       0x2075   0x14  Code  Gb  exit.o [6]
+__iar_Fail_s                 0x13c5   0x1c  Code  Gb  xfail_s.o [2]
+__iar_Memchr                 0x143d         Code  Gb  memchr.o [5]
+__iar_Memset_word            0x30c9         Code  Gb  ABImemset.o [5]
+__iar_Strchr                 0x13a5         Code  Gb  strchr.o [5]
+__iar_dadd                   0x17b9         Code  Gb  DblSub.o [4]
+__iar_data_init3             0x34f9   0x28  Code  Gb  data_init.o [5]
+__iar_dsub                   0x1f05         Code  Gb  DblAdd.o [4]
+__iar_dsubStart              0x1f17         Code  Gb  DblAdd.o [4]
+__iar_frexp                  0x1549         Code  Gb  frexp.o [4]
+__iar_frexpl                 0x1549         Code  Gb  frexp.o [4]
+__iar_init_vfp               0x3581         Code  Wk  startup_TM4C1294.o [1]
+__iar_ldexp64                0x160d         Code  Gb  ldexp.o [4]
+__iar_program_start          0x35b1         Code  Gb  cstartup_M.o [5]
+__iar_scalbln64              0x160d         Code  Gb  ldexp.o [4]
+__iar_scalbn64               0x160d         Code  Gb  ldexp.o [4]
 __iar_softfp___iar_frexp64
-                             0x133d         Code  Gb  frexp.o [4]
-__iar_softfp_frexp           0x133d         Code  Gb  frexp.o [4]
-__iar_softfp_frexpl          0x133d         Code  Gb  frexp.o [4]
-__iar_zero_init3             0x116b   0x3a  Code  Gb  zero_init3.o [5]
-__low_level_init             0x3153    0x4  Code  Gb  low_level_init.o [2]
+                             0x153d         Code  Gb  frexp.o [4]
+__iar_softfp_frexp           0x153d         Code  Gb  frexp.o [4]
+__iar_softfp_frexpl          0x153d         Code  Gb  frexp.o [4]
+__iar_zero_init3             0x136b   0x3a  Code  Gb  zero_init3.o [5]
+__low_level_init             0x354f    0x4  Code  Gb  low_level_init.o [2]
 __vector_table                  0x0         Data  Gb  startup_TM4C1294.o [1]
 __vector_table_0x1c            0x1c         Data  Gb  startup_TM4C1294.o [1]
-_call_main                   0x3141         Code  Gb  cmain.o [5]
-_exit                        0x315d         Code  Gb  cexit.o [5]
-_main                        0x314f         Code  Gb  cmain.o [5]
-abort                        0x1af1    0x6  Code  Gb  abort.o [2]
+_call_main                   0x353d         Code  Gb  cmain.o [5]
+_exit                        0x3559         Code  Gb  cexit.o [5]
+_main                        0x354b         Code  Gb  cmain.o [5]
+abort                        0x1eed    0x6  Code  Gb  abort.o [2]
 alta                    0x2000'0480   0x78  Data  Gb  s11_g01_lab2.o [1]
 baixa                   0x2000'04f8   0x78  Data  Gb  s11_g01_lab2.o [1]
-end                     0x2000'058c    0x4  Data  Gb  s11_g01_lab2.o [1]
-exit                         0x3157    0x4  Code  Gb  exit.o [2]
+dutyCycle               0x2000'0580    0x8  Data  Gb  s11_g01_lab2.o [1]
+end                     0x2000'0594    0x4  Data  Gb  s11_g01_lab2.o [1]
+exit                         0x3553    0x4  Code  Gb  exit.o [2]
 freq                    0x2000'0578    0x8  Data  Gb  s11_g01_lab2.o [1]
-g_bDisableEcho          0x2000'05ad    0x1  Data  Lc  uartstdio.o [1]
-g_pcHex                      0x31c8    0x4  Data  Lc  uartstdio.o [1]
+g_bDisableEcho          0x2000'05b5    0x1  Data  Lc  uartstdio.o [1]
+g_pcHex                      0x35cc    0x4  Data  Lc  uartstdio.o [1]
 g_pcUARTRxBuffer        0x2000'0400   0x80  Data  Lc  uartstdio.o [1]
 g_pcUARTTxBuffer        0x2000'0000  0x400  Data  Lc  uartstdio.o [1]
 g_pfnRAMVectors         0x2000'0800  0x26c  Data  Lc  interrupt.o [3]
-g_pppui32XTALtoVCO           0x2d30  0x1b0  Data  Lc  sysctl.o [3]
-g_ppui32TimerIntMap          0x2ee0   0x60  Data  Lc  timer.o [3]
+g_pppui32XTALtoVCO           0x3128  0x1b0  Data  Lc  sysctl.o [3]
+g_ppui32TimerIntMap          0x32d8   0x60  Data  Lc  timer.o [3]
 g_ppui32TimerIntMapSnowflake
-                             0x2f40   0x40  Data  Lc  timer.o [3]
-g_pui32Dii16Regs             0x22ac   0x14  Data  Lc  interrupt.o [3]
-g_pui32EnRegs                0x2298   0x14  Data  Lc  interrupt.o [3]
-g_pui32GPIOBaseAddrs         0x2f80   0x90  Data  Lc  gpio.o [3]
-g_pui32VCOFrequencies        0x2678    0x8  Data  Lc  sysctl.o [3]
-g_pui32Xtals                 0x3010   0x6c  Data  Lc  sysctl.o [3]
-g_sXTALtoMEMTIM              0x307c   0x30  Data  Lc  sysctl.o [3]
-g_ui32Base              0x2000'05a0    0x4  Data  Lc  uartstdio.o [1]
-g_ui32PortNum           0x2000'05a4    0x4  Data  Lc  uartstdio.o [1]
-g_ui32UARTBase               0x3190    0xc  Data  Lc  uartstdio.o [1]
-g_ui32UARTInt                0x319c    0xc  Data  Lc  uartstdio.o [1]
-g_ui32UARTPeriph             0x31a8    0xc  Data  Lc  uartstdio.o [1]
-g_ui32UARTRxReadIndex   0x2000'059c    0x4  Data  Lc  uartstdio.o [1]
-g_ui32UARTRxWriteIndex  0x2000'0598    0x4  Data  Lc  uartstdio.o [1]
-g_ui32UARTTxReadIndex   0x2000'0594    0x4  Data  Lc  uartstdio.o [1]
-g_ui32UARTTxWriteIndex  0x2000'0590    0x4  Data  Lc  uartstdio.o [1]
-i                       0x2000'05ac    0x1  Data  Gb  s11_g01_lab2.o [1]
-main                         0x274b  0x20c  Code  Gb  s11_g01_lab2.o [1]
-memchr                       0x123d         Code  Gb  memchr.o [5]
+                             0x3338   0x40  Data  Lc  timer.o [3]
+g_pui32Dii16Regs             0x26a8   0x14  Data  Lc  interrupt.o [3]
+g_pui32EnRegs                0x2694   0x14  Data  Lc  interrupt.o [3]
+g_pui32GPIOBaseAddrs         0x3378   0x90  Data  Lc  gpio.o [3]
+g_pui32VCOFrequencies        0x2a74    0x8  Data  Lc  sysctl.o [3]
+g_pui32Xtals                 0x3408   0x6c  Data  Lc  sysctl.o [3]
+g_sXTALtoMEMTIM              0x3474   0x30  Data  Lc  sysctl.o [3]
+g_ui32Base              0x2000'05a8    0x4  Data  Lc  uartstdio.o [1]
+g_ui32PortNum           0x2000'05ac    0x4  Data  Lc  uartstdio.o [1]
+g_ui32UARTBase               0x358c    0xc  Data  Lc  uartstdio.o [1]
+g_ui32UARTInt                0x3598    0xc  Data  Lc  uartstdio.o [1]
+g_ui32UARTPeriph             0x35a4    0xc  Data  Lc  uartstdio.o [1]
+g_ui32UARTRxReadIndex   0x2000'05a4    0x4  Data  Lc  uartstdio.o [1]
+g_ui32UARTRxWriteIndex  0x2000'05a0    0x4  Data  Lc  uartstdio.o [1]
+g_ui32UARTTxReadIndex   0x2000'059c    0x4  Data  Lc  uartstdio.o [1]
+g_ui32UARTTxWriteIndex  0x2000'0598    0x4  Data  Lc  uartstdio.o [1]
+i                       0x2000'05b4    0x1  Data  Gb  s11_g01_lab2.o [1]
+ldexp                        0x160d         Code  Gb  ldexp.o [4]
+ldexpl                       0x160d         Code  Gb  ldexp.o [4]
+main                         0x2b47  0x206  Code  Gb  s11_g01_lab2.o [1]
+memchr                       0x143d         Code  Gb  memchr.o [5]
 periodo                 0x2000'0570    0x8  Data  Gb  s11_g01_lab2.o [1]
-scale                        0x1049   0x46  Code  Lc  xprintflarge_nomb.o [2]
-sec_hand                0x2000'05a8    0x4  Data  Lc  xfail_s.o [2]
-sprintf                      0x2c91   0x40  Code  Gb  sprintf.o [2]
-start                   0x2000'0588    0x4  Data  Gb  s11_g01_lab2.o [1]
-strchr                       0x11a5         Code  Gb  strchr.o [5]
-strlen                       0x1205         Code  Gb  strlen.o [5]
-tempoAlta               0x2000'0580    0x4  Data  Gb  s11_g01_lab2.o [1]
-tempoBaixa              0x2000'0584    0x4  Data  Gb  s11_g01_lab2.o [1]
+scalbln                      0x160d         Code  Gb  ldexp.o [4]
+scalblnl                     0x160d         Code  Gb  ldexp.o [4]
+scalbn                       0x160d         Code  Gb  ldexp.o [4]
+scalbnl                      0x160d         Code  Gb  ldexp.o [4]
+scale                        0x126f   0x46  Code  Lc  xprintffull_nomb.o [2]
+sec_hand                0x2000'05b0    0x4  Data  Lc  xfail_s.o [2]
+sprintf                      0x3089   0x40  Code  Gb  sprintf.o [2]
+start                   0x2000'0590    0x4  Data  Gb  s11_g01_lab2.o [1]
+strchr                       0x13a5         Code  Gb  strchr.o [5]
+strlen                       0x1405         Code  Gb  strlen.o [5]
+tempoAlta               0x2000'0588    0x4  Data  Gb  s11_g01_lab2.o [1]
+tempoBaixa              0x2000'058c    0x4  Data  Gb  s11_g01_lab2.o [1]
 
 
-[1] = C:\Users\rodri\Desktop\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj
+[1] = C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab2\Projects\s11_g01_lab2\Debug\Obj
 [2] = dl7M_tln.a
 [3] = driverlib.a
 [4] = m7M_tls.a
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-  11'732 bytes of readonly  code memory
-   1'016 bytes of readonly  data memory
-  34'847 bytes of readwrite data memory
+  12'748 bytes of readonly  code memory
+   1'028 bytes of readonly  data memory
+  34'855 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
