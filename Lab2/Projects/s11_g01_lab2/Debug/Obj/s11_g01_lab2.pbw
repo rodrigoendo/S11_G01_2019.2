@@ -27882,13 +27882,41 @@
     "scope": null
   },
   {
+    "ID": "c:@timerLoadValue",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "timerLoadValue",
+    "location": {
+      "column": "11",
+      "line": "47",
+      "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
+    },
+    "name": "timerLoadValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@timerPrescaleLoadValue",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "timerPrescaleLoadValue",
+    "location": {
+      "column": "11",
+      "line": "48",
+      "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
+    },
+    "name": "timerPrescaleLoadValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@UARTStdioIntHandler",
     "What": "Function",
     "defdec": "Dec",
     "display": "void UARTStdioIntHandler(void)",
     "location": {
       "column": "13",
-      "line": "46",
+      "line": "50",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "UARTStdioIntHandler",
@@ -27902,7 +27930,7 @@
     "display": "void UARTInit(void)",
     "location": {
       "column": "6",
-      "line": "48",
+      "line": "52",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "UARTInit",
@@ -27916,7 +27944,7 @@
     "display": "void UART0_Handler(void)",
     "location": {
       "column": "6",
-      "line": "66",
+      "line": "70",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "UART0_Handler",
@@ -27930,7 +27958,7 @@
     "display": "void TIMER0A_Handler(void)",
     "location": {
       "column": "6",
-      "line": "70",
+      "line": "74",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "TIMER0A_Handler",
@@ -27944,7 +27972,7 @@
     "display": "void TIMER0B_Handler(void)",
     "location": {
       "column": "6",
-      "line": "81",
+      "line": "84",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "TIMER0B_Handler",
@@ -27958,7 +27986,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "92",
+      "line": "94",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "main",
@@ -27966,13 +27994,13 @@
     "scope": null
   },
   {
-    "ID": "c:s11_g01_lab2.c@4306@F@main@timerA",
+    "ID": "c:s11_g01_lab2.c@4407@F@main@timerA",
     "What": "Variable",
     "defdec": "Def",
     "display": "timerA",
     "location": {
       "column": "14",
-      "line": "145",
+      "line": "152",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "timerA",
@@ -27980,13 +28008,13 @@
     "scope": null
   },
   {
-    "ID": "c:s11_g01_lab2.c@4366@F@main@timerB",
+    "ID": "c:s11_g01_lab2.c@4467@F@main@timerB",
     "What": "Variable",
     "defdec": "Def",
     "display": "timerB",
     "location": {
       "column": "14",
-      "line": "146",
+      "line": "153",
       "path": "D:\\Users\\Giovanni\\workspace\\S11_G01_2019.2\\Lab2\\Projects\\s11_g01_lab2\\src\\s11_g01_lab2.c"
     },
     "name": "timerB",
