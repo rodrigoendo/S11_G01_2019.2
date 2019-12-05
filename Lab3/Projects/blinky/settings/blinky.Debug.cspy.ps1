@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Softwares\common\bin\cspybat" -f "D:\Usuario\Downloads\EK-TM4C1294_RTOS_IAR8\EK-TM4C1294_RTOS_IAR8\Projects\blinky\settings\blinky.Debug.general.xcl" --backend -f "D:\Usuario\Downloads\EK-TM4C1294_RTOS_IAR8\EK-TM4C1294_RTOS_IAR8\Projects\blinky\settings\blinky.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\rodri\Desktop\S11_G01_2019.2\Lab3\Projects\blinky\settings\blinky.Debug.general.xcl" --backend -f "C:\Users\rodri\Desktop\S11_G01_2019.2\Lab3\Projects\blinky\settings\blinky.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Softwares\common\bin\cspybat" -f "D:\Usuario\Downloads\EK-TM4C1294_RTOS_IAR8\EK-TM4C1294_RTOS_IAR8\Projects\blinky\settings\blinky.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Usuario\Downloads\EK-TM4C1294_RTOS_IAR8\EK-TM4C1294_RTOS_IAR8\Projects\blinky\settings\blinky.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\rodri\Desktop\S11_G01_2019.2\Lab3\Projects\blinky\settings\blinky.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\rodri\Desktop\S11_G01_2019.2\Lab3\Projects\blinky\settings\blinky.Debug.driver.xcl" 
 }

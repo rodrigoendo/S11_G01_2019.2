@@ -3,19 +3,31 @@
 osMessageQueueId_t messageQueueElevadores[3];
 osThreadId_t threadComandosId;
 
-char var[5];
+char entrada[5];
+char saida[5];
 
 void decode(char *message){
-  
+    
+    switch (message[1]){
+    case 'I':
+      
+    break;
+    case 'E':
+      
+    break;
+    default:
+    break;
+    }
+    
     switch (message[0]){
     case 'e':
-      osMessageQueuePut (messageQueueElevadores[0], &var, 0, NULL);
+      osMessageQueuePut (messageQueueElevadores[0], &saida, 0, NULL);
     break;
     case 'c':
-      osMessageQueuePut (messageQueueElevadores[1], &var, 0, NULL);
+      osMessageQueuePut (messageQueueElevadores[1], &saida, 0, NULL);
     break;
     case 'd':
-      osMessageQueuePut (messageQueueElevadores[2], &var, 0, NULL);
+      osMessageQueuePut (messageQueueElevadores[2], &saida, 0, NULL);
     default:
     break;
     }
@@ -23,8 +35,8 @@ void decode(char *message){
 
 void threadComandos(void *arg){
     while(true){
-      UARTgets(var, 5);
-      decode(var);
+      UARTgets(entrada, 5);
+      decode(entrada);
     }
 }
 

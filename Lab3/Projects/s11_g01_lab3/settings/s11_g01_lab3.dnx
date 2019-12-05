@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <settings>
     <DebugChecksum>
-        <Checksum>3258621217</Checksum>
+        <Checksum>3912966371</Checksum>
     </DebugChecksum>
     <Stack>
         <FillEnabled>0</FillEnabled>
@@ -77,6 +77,13 @@
         <LMIFTDIserialNo>0F00A5B1</LMIFTDIserialNo>
         <LMIFTDIfoundProbes />
     </LMIFTDIDriver>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints>
+        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\src\elevador.c}.58.7" 1 0 0 0 "" 0 ""</Bp0>
+        <Count>1</Count>
+    </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -86,21 +93,15 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
+    <Aliases>
+        <A0>_ "C:\Users\Giovanni\Documents\eclipse-workspace\S11_G01_2019.2_Giovanni\TivaWare_C_Series-2.1.4.178\driverlib\gpio.c" "C:\Users\rodri\Desktop\S11_G01_2019.2\Lab3\TivaWare_C_Series-2.1.4.178\driverlib\gpio.c"</A0>
+        <Count>1</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
     <CallStackLog>
         <Enabled>0</Enabled>
     </CallStackLog>
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints>
-        <Count>0</Count>
-    </Breakpoints>
-    <Aliases>
-        <A0>_ "C:\Users\Giovanni\Documents\eclipse-workspace\S11_G01_2019.2_Giovanni\TivaWare_C_Series-2.1.4.178\driverlib\gpio.c" "C:\Users\rodri\Desktop\S11_G01_2019.2-master\TivaWare_C_Series-2.1.4.178\driverlib\gpio.c"</A0>
-        <Count>1</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
 </settings>
