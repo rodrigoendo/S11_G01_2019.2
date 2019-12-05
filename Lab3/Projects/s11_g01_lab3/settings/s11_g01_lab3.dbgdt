@@ -947,7 +947,7 @@
                     <item>message[1]</item>
                     <item>osMessageQueuePut</item>
                     <item>status</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

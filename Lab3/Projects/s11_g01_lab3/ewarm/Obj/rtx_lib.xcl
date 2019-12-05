@@ -1,12 +1,12 @@
-"C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\src\comandos.c"
+"C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\src\rtx_lib.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\ewarm\Obj\comandos.pbi.dep
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\ewarm\Obj\rtx_lib.pbi.dep
 -o
-comandos.pbi
+rtx_lib.pbi
 -I
 C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\src
 -I

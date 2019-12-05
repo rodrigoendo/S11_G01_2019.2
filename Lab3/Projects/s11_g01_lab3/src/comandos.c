@@ -7,7 +7,6 @@ char var[5];
 
 void decode(char *message){
   
-    
     switch (message[0]){
     case 'e':
       osMessageQueuePut (messageQueueElevadores[0], &var, 0, NULL);

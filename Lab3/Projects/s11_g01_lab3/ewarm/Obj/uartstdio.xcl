@@ -1,14 +1,14 @@
-"C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\src\comandos.c"
+"C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\TivaWare_C_Series-2.1.4.178\utils\uartstdio.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\ewarm\Obj\comandos.pbi.dep
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\ewarm\Obj\uartstdio.pbi.dep
 -o
-comandos.pbi
+uartstdio.pbi
 -I
-C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\src
+C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\TivaWare_C_Series-2.1.4.178\utils
 -I
 C:\Users\rodri\Desktop\Nova pasta\S11_G01_2019.2\Lab3\Projects\s11_g01_lab3\..\drivers
 -I

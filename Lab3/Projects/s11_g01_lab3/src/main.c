@@ -60,43 +60,11 @@ void UART0_Handler(void){
   UARTStdioIntHandler();
 } // UART0_Handler
 
-/*osThreadId_t thread1_id, thread2_id;
-
-void thread1(void *arg){
-  uint8_t state = 0;
-  
-  while(1){
-    state ^= LED1;
-    LEDWrite(LED1, state);
-    osDelay(100);
-  } // while
-} // thread1
-
-void thread2(void *arg){
-  uint8_t state = 0;
-  uint32_t tick;
-  char var[10];
-  char var1[5] = "dLc\r";
-  while(1){
-    tick = osKernelGetTickCount();
-    
-    state ^= LED2;
-    LEDWrite(LED2, state);
-    UARTgets(var, 10);
-    UARTwrite(var1, 10);
-    printf("O nome armazenado foi: %s", var);
-    osDelayUntil(tick + 100);
-  } // while
-} // thread2
-*/
-
-
 void app_main (void *argument)
 {
   UARTInit();
 
   threadComandosId = osThreadNew(threadComandos, NULL, NULL);
-
 
   for(int i = 0; i < 3; i++)
   {
@@ -104,7 +72,6 @@ void app_main (void *argument)
     messageQueueElevadores[i] = osMessageQueueNew(15, 5, NULL);
   }       
 
-  //messageQueueOutputId = osMessageQueueNew(10, 3, NULL);
   char sent[5] = "er\r";
   osMessageQueuePut (messageQueueElevadores[0], &sent, 0, NULL);
   char sent2[5] = "cr\r";
@@ -118,14 +85,9 @@ void app_main (void *argument)
 }
 void main(void){
 
-
-  //LEDInit(LED2 | LED1);
   SystemCoreClockUpdate();
   osKernelInitialize();
 
-  //thread1_id = osThreadNew(thread1, NULL, NULL);
-  //thread2_id = osThreadNew(thread2, NULL, NULL);
-  
   osThreadNew(app_main, NULL, NULL);
   
   if(osKernelGetState() == osKernelReady)
