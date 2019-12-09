@@ -72,15 +72,16 @@ void app_main (void *argument)
     messageQueueElevadores[i] = osMessageQueueNew(15, 5, NULL);
   }       
 
-  /*char sent[5] = "er\r";
+  // Inicializa os elevadores enviando-os para andar 0 com as portas abertas.
+  char sent[5] = "er\r";
   osMessageQueuePut (messageQueueElevadores[0], &sent, 0, NULL);
   char sent2[5] = "cr\r";
   osMessageQueuePut (messageQueueElevadores[1], &sent2, 0, NULL);
   char sent3[5] = "dr\r";
   osMessageQueuePut (messageQueueElevadores[2], &sent3, 0, NULL);
-  */
+
   while(true){
-  osDelay(osWaitForever);
+    osDelay(osWaitForever);
   }
 }
 void main(void){
@@ -90,8 +91,9 @@ void main(void){
 
   osThreadNew(app_main, NULL, NULL);
   
-  if(osKernelGetState() == osKernelReady)
+  if(osKernelGetState() == osKernelReady) {
     osKernelStart();
+  }
   
   while(1);
 } // main

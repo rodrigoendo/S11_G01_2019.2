@@ -3,7 +3,6 @@
 osThreadId_t threadElevadorIds[3];
 int posicao = 0 ;
 int nElevador;
-char comando[4];
 
 void threadElevador(void *arg){
   nElevador = ((int)arg);
@@ -12,7 +11,6 @@ void threadElevador(void *arg){
   while(true){
     status = osMessageQueueGet(messageQueueElevadores[nElevador], &var, NULL, NULL);
     if(status == osOK){
-      fechaPorta(nElevador);
       printf("Elevador %d: %s \n",nElevador, var);
       UARTwrite(var, 5);
     }
@@ -20,42 +18,37 @@ void threadElevador(void *arg){
 }
 
 void move(int andar){
+  char moveCommand[4];
   andar = 5000*andar;
-  if(posicao > amdar){
-    strcpy(comando, elevadorID(nElevador));
-    strcat(comando, "s\r");
+  if(posicao > andar){
+    strcpy(moveCommand, elevadorID(nElevador));
+    strcat(moveCommand, "s\r");
   }
-  else if (posicao < amdar){
-    strcpy(comando, elevadorID(nElevador));
-    strcat(comando, "d\r");
+  else if (posicao < andar){
+    strcpy(moveCommand, elevadorID(nElevador));
+    strcat(moveCommand, "d\r");
   }
   else{
     abrePorta(nElevador);
   }
   
   while(posicao != andar){
-    
-    posicao = 
+    //posicao = 
   }
 }
 
 void abrePorta(int nElevador){
-  
-  strcpy(comando, elevadorID(nElevador));
-  strcat(comando, "a\r");
-    
-  UARTwrite(comando, 5);
-
+  char openCommand[4];
+  strcpy(openCommand, elevadorID(nElevador));
+  strcat(openCommand, "a\r");
+  UARTwrite(openCommand, 5);
 }
 
 void fechaPorta(int nElevador){
-  
-    char comando[4];
-    strcpy(comando, elevadorID(nElevador));
-    strcat(comando, "f\r");
-    
-  UARTwrite(comando, 5);
-  
+    char closeCommand[4];
+    strcpy(closeCommand, elevadorID(nElevador));
+    strcat(closeCommand, "f\r");
+    UARTwrite(closeCommand, 5);
 }
 
 char *elevadorID(int nElevador){

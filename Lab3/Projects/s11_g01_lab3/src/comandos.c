@@ -8,16 +8,16 @@ char saida[5];
 
 void decode(char *message){
     
+    /*
     switch (message[1]){
     case 'I':
-      
-    break;
-    case 'E':
-      
-    break;
+      break;
+    case 'E':  
+      break;
     default:
-    break;
+      break;
     }
+    */
     
     switch (message[0]){
     case 'e':
@@ -36,6 +36,7 @@ void decode(char *message){
 void threadComandos(void *arg){
     while(true){
       UARTgets(entrada, 5);
+      printf("Entrada: %s \n", entrada);
       decode(entrada);
     }
 }
