@@ -13,5 +13,6 @@ extern osThreadId_t threadComandosId;
 
 void threadComandos(void *arg);
 void decode(char *message);
+char *getAndar(char *letraAndar);
 
 #endif

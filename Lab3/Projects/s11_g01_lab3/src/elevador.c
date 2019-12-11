@@ -52,17 +52,17 @@ void fechaPorta(int nElevador){
 }
 
 char *elevadorID(int nElevador){
-    switch (nElevador){
-    case 0:
-      return "e";
+  switch (nElevador){
+  case 0:
+    return "e";
     break;
-    case 1:
-      return "c";
+  case 1:
+    return "c";
     break;
-    case 2:
-      return "d";
+  case 2:
+    return "d";
     break;
-    default:
+  default:
     break;
-    }
+  }
 }
